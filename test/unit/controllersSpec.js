@@ -5,18 +5,18 @@ describe('mycontroller', function() {
         scope = {};
     });
 
-    it('should populate the scope with a name', inject(function($controller) {
+    it('should populate the scope with a title', inject(function($controller) {
         var ctrl = $controller('mycontroller', {
             $scope: scope
         });
-        expect(scope.name).toBe('world');
+        expect(scope.title).toBe('My favorite cars');
     }));
 
-    it('should populate the scope with a name', inject(function($controller) {
+    it('should populate the scope with a cars array', inject(function($controller) {
         var ctrl = $controller('mycontroller', {
             $scope: scope
         });
-        expect(scope.numbers.length).toBe(3);
+        expect(scope.cars.length).toBe(5);
     }));
 
 });

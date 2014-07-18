@@ -1,15 +1,25 @@
 <html ng-app='myapp'>
 
 <head>
-	<script src='bower_components/angular/angular.js'></script>
-	<script src='js/controllers.js'></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='js/controllers.js'></script>
 </head>
 
 <body ng-controller='mycontroller'>
-	<p>Hello {{name}}</p>
-	<ul>
-		<li ng-repeat='i in numbers'>{{i}}</li>
-	</ul>
+    <table>
+        <tr>
+            <td><input type='text' ng-model='query'></input></td>
+            <td>{{title}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <ul>
+                    <li ng-repeat='car in cars | filter:query'>{{car}}</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
